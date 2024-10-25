@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Süße Nachrichten für Yasemin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #fff9f9;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        p {
+            font-size: 22px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Für Yasemin, meine Liebe!</h1>
+    <p id="message">Lade die Nachricht...</p>
+
+    <script>
+        // Liste der süßen Nachrichten für Yasemin
+        const messages = [
+            "Liebe Yasemin, mein Herz schlägt schneller, sobald ich an dich denke. Du bist der erste Gedanke am Morgen und der letzte, bevor ich einschlafe. Deine Liebe ist mein größter Schatz.",
+            "Jeder Moment mit dir, Yasemin, fühlt sich wie ein Märchen an. Du verwandelst selbst die einfachsten Augenblicke in etwas Wundervolles. Danke, dass du mein Leben so magisch machst.",
+            "Dein Lächeln, Yasemin, erhellt meinen Tag wie Sonnenstrahlen nach einem langen Regen. Du bringst Wärme und Freude in mein Leben, und ich kann mir keinen Tag ohne dich vorstellen.",
+            "Es gibt keine Worte, die beschreiben können, wie tief meine Liebe für dich, Yasemin, ist. Du bist nicht nur die Liebe meines Lebens, du bist meine Inspiration, meine Motivation und mein größter Halt.",
+            "Mit dir an meiner Seite, Yasemin, fühle ich mich, als könnte ich alles schaffen. Deine Liebe gibt mir Stärke, und dein Vertrauen macht mich mutig. Du bist mein Fels in der Brandung.",
+            "Manchmal frage ich mich, womit ich so viel Glück verdient habe, dich, Yasemin, in meinem Leben zu haben. Du bist das schönste Geschenk, das das Leben mir gemacht hat. Du bist mein Herz und meine Seele.",
+            "Die Sterne am Himmel verblassen im Vergleich zu deinem strahlenden Lächeln. Du bist die schönste Person, die ich je gekannt habe – nicht nur äußerlich, sondern auch mit deinem liebevollen Herzen."
+        ];
+
+        // Heutiges Datum
+        const today = new Date();
+        const startDate = new Date("2024-10-22"); // Das Startdatum festlegen
+        const diffInDays = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+
+        // Zeige die entsprechende Nachricht basierend auf dem Tag
+        const messageElement = document.getElementById('message');
+        if (diffInDays >= 0 && diffInDays < messages.length) {
+            messageElement.innerText = messages[diffInDays];
+        } else {
+            messageElement.innerText = "Liebe Yasemin, auch wenn die Woche der Nachrichten vorbei ist, meine Liebe für dich wird niemals enden. Du bist und bleibst mein Ein und Alles.";
+        }
+    </script>
+</body>
+</html>
